@@ -1,55 +1,32 @@
-# Kurs: Python + Git na projekcie Biblioteka
+# Lekcja 01: Zmienne i typy danych
 
-Projekt testowy, w którym uczysz się Pythona i pracy z Gitem. Każda lekcja to osobny branch
-z opisem zadań w pliku `README.md`. Wykonujesz zadania, robisz commity, wypychasz branch
-i otwierasz Merge Request (MR) / Pull Request (PR) do `main`.
+## Cel
+Poznasz zmienne, podstawowe typy (`str`, `int`, `float`, `bool`) i wypisywanie danych.
+Poznasz też podstawowe polecenia Git: `status`, `add`, `commit`, `log`, `push`.
 
-## Wymagania
-- Python 3.10 lub nowszy (`python3 --version`)
-- Git 2.28 lub nowszy (`git --version`)
-- Konto na GitHub lub GitLab
-- Edytor kodu (np. VS Code)
+## Python
+- Zmienna: `tytul = "Lalka"`
+- Typy: `str`, `int`, `float`, `bool`; sprawdzanie: `type(zmienna)`
+- `print()` i f-stringi: `print(f"Książka: {tytul}")`
+- `input()` pobiera tekst od użytkownika
 
-## Przygotowanie (zrób raz)
-1. Utwórz pusty projekt na GitHub/GitLab (bez README, bez .gitignore).
-2. Zaimportuj repozytorium lokalnie:
-   ```bash
-   git clone <adres-repo-instruktora> python-git-kurs
-   cd python-git-kurs
-   git remote set-url origin <TWOJ-ADRES-REPO>
-   git push --all origin
-   git push --tags origin
-   ```
-3. Sprawdź branche: `git branch -a`
+## Git
+1. Sprawdź stan: `git status`
+2. Edytuj `lekcje/01_zmienne.py` (zrób zadania poniżej)
+3. Dodaj do stage: `git add lekcje/01_zmienne.py`
+4. Zrób commit: `git commit -m "feat(lekcja-01): zmienne i typy danych"`
+5. Zobacz historię: `git log --oneline`
+6. Wypchnij: `git push -u origin 01-zmienne-i-typy`
+7. Otwórz MR/PR do `main`.
 
-## Kolejność lekcji i tematy
+## Zadania
+1. Utwórz zmienne: `tytul` (str), `autor` (str), `rok_wydania` (int), `cena` (float), `dostepna` (bool).
+2. Wypisz każdą zmienną w osobnej linii przez `print`.
+3. Wypisz typ każdej zmiennej przez `type()`.
+4. Pobierz od użytkownika tytuł przez `input()` i wypisz komunikat `Dodano: <tytuł>`.
+5. Dopisz linię do `POSTEP.md`: `- [x] 01 Zmienne i typy`.
+6. Dopisz na końcu `README.md` główny (w `main`) podsumowanie — przy merge pojawi się konflikt, rozwiąż go.
 
-| Nr | Branch | Python | Git |
-|----|--------|--------|-----|
-| 01 | `01-zmienne-i-typy` | zmienne, typy, `input`, `print` | `status`, `add`, `commit`, `log`, `push` |
-| 02 | `02-warunki-i-petle` | `if/elif/else`, `for`, `while` | `diff`, `diff --staged`, dobre commity |
-| 03 | `03-funkcje` | `def`, argumenty, `return` | `switch`, `branch`, `branch -d` |
-| 04 | `04-kolekcje` | listy, słowniki, zbiory, krotki | `stash`, `restore`, `reset` |
-| 05 | `05-klasy-i-obiekty` | klasy, obiekty, `__init__`, metody | `commit --amend`, `show`, `log --graph` |
-| 06 | `06-dziedziczenie` | dziedziczenie, polimorfizm | `revert` |
-| 07 | `07-wyjatki-i-pliki` | `try/except`, pliki, JSON | `.gitignore`, `rm --cached` |
-| 08 | `08-testy-pytest` | `pytest`, asercje, testy jednostkowe | `log --grep`, `blame` |
-| 09 | `09-konflikt-a` + `09-konflikt-b` | praca z modułami | **konflikty przy merge**, `merge --abort` |
-| 10 | `10-cherry-pick` (+ `10-zrodlo-statystyki`) | moduł statystyk | **cherry-pick** |
-| 11 | `11-rest-api` | Flask, REST, JSON, HTTP | **MR/PR**, push `-u`, review |
-| 12 | `12-rebase-i-historia` | refaktoryzacja | **rebase -i**, squash, fixup, reflog |
-| 13 | `13-release` | wersjonowanie | **tag**, `push --tags`, usuwanie branchy |
-
-## Jak oddawać lekcję
-1. `git switch <branch-lekcji>`
-2. Wykonaj zadania z `README.md` danego brancha.
-3. Commituj małymi krokami z sensownymi komunikatami.
-4. `git push -u origin <branch-lekcji>`
-5. Otwórz MR/PR do `main` z opisem wykonanych zadań.
-6. Po akceptacji instruktora zscal (merge) do `main`.
-
-Uwaga: pliki `README.md` i `POSTEP.md` są zmieniane w wielu branchach. Przy scalaniu
-do `main` pojawią się konflikty. To celowe, bo są częścią nauki. Zachowaj zawartość
-z obu stron i dopisz swoją linię do `POSTEP.md`.
-
-Ściągawka z komendami Git: `docs/sciagawka-git.md`.
+## Kryteria ukończenia
+- Plik `lekcje/01_zmienne.py` uruchamia się bez błędu: `python lekcje/01_zmienne.py`
+- Commit ma czytelny komunikat, MR jest otwarty.
